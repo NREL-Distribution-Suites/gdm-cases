@@ -1,8 +1,8 @@
 name: Build GDM case files
 
 on:
-  push:
-    branches: ["main"]
+  repository_dispatch:
+    types: [trigger-action]
 
 jobs:
   build:
