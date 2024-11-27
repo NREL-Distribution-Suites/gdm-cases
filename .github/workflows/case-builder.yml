@@ -28,7 +28,7 @@ jobs:
             title: ${{ steps.case_builder.outputs.branch }}
             commit-message: ${{ steps.case_builder.outputs.branch }}
             add-paths: |
-              data
+              data/**
             base: main
             body: 'This pull request was automatically created.'
     
