@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Case builder
-        uses: NREL-Distribution-Suites/gdm-case-action@main
+        uses: NREL-Distribution-Suites/gdm-case-action
         id: case_builder
         with:
             datapath: data
