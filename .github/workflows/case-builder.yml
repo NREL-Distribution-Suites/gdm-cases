@@ -1,0 +1,34 @@
+name: Build GDM case files
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout the repository
+        uses: actions/checkout@v4
+
+      - name: Case builder
+        uses: NREL-Distribution-Suites/gdm-case-action@main
+        id: case_builder
+        with:
+            datapath: data
+      
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        id: pull_request
+        if: ${{ steps.case_builder.outputs.branch}}
+        with:
+            token: ${{ secrets.GITHUB_TOKEN }}
+            branch: ${{ steps.case_builder.outputs.branch }}
+            title: ${{ steps.case_builder.outputs.branch }}
+            commit-message: ${{ steps.case_builder.outputs.branch }}
+            add-paths: |
+              data
+            base: main
+            body: 'This pull request was automatically created.'
+    
