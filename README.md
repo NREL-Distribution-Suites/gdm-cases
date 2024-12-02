@@ -5,7 +5,7 @@ A repository store for [Grid-Data-Model's](https://github.com/NREL-Distribution-
 > [!WARNING]
 > Do not create PR in this repository manually. 
 
-This repo uses [GDM Case Action](https://github.com/NREL-Distribution-Suites/gdm-case-action) to automatically create pull request when [DiTTo]() version changes and/or new dataset is added. [Learn more about dataset and process to add new dataset here.](https://github.com/NREL-Distribution-Suites/gdm-case-action)
+This repo uses [GDM Case Action](https://github.com/NREL-Distribution-Suites/gdm-case-action) to automatically create pull request when [DiTTo](https://github.com/NREL-Distribution-Suites/ditto) version changes and/or new dataset is added. [Learn more about dataset and process to add new dataset here.](https://github.com/NREL-Distribution-Suites/gdm-case-action)
 
 ## Using the dataset.
 
