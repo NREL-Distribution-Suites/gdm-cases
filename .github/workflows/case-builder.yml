@@ -3,6 +3,8 @@ name: Build GDM case files
 on:
   repository_dispatch:
     types: [trigger-action]
+  push:
+    branches: [ main ]
 
 jobs:
   build:
